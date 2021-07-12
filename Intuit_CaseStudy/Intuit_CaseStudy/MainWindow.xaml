@@ -1,0 +1,132 @@
+﻿<Window x:Class="Intuit_CaseStudy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Intuit_CaseStudy"
+        mc:Ignorable="d"
+        Title="Glimpse" FontFamily="Georgia Pro Black" FontWeight="DemiBold" Height="450" Width="800" SnapsToDevicePixels="True">
+    <Window.Background>
+        <ImageBrush ImageSource="/Resources/GlimpseGalaxy.JPG" Stretch="Fill" Opacity="0.85"/>
+    </Window.Background>
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type local:ItemType}">
+            <StackPanel>
+                <Image  Source="{Binding OpenClose,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" 
+                   Stretch="UniformToFill"  VerticalAlignment="Top" HorizontalAlignment="Center"></Image>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="1000*"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.Children>
+            <Label Grid.Row="0" Content="Glimpse Search" FontFamily="Matura MT Script Capitals" FontWeight="Bold" Margin="10,10,10,10"
+                   FontStyle="Normal" Foreground="WhiteSmoke" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Bottom"></Label>
+          
+            <Border Grid.Row="1" BorderBrush="Gray" Grid.Column="0" BorderThickness="1" Margin="10,10,10,10" CornerRadius="6" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Grid Height="25">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Row="0" Grid.Column="0"  Width="450" Background="Transparent" BorderThickness="0" VerticalAlignment="Center"
+                             Foreground="WhiteSmoke" FontFamily="Arial" FontSize="16" Text="{Binding Path=SearchString , Mode=TwoWay}">
+                        <TextBox.InputBindings>
+                            <KeyBinding Command="{Binding SearchButtonCommand}" Key="Enter" />
+                        </TextBox.InputBindings>
+                    </TextBox>
+                    <Button Grid.Row="0" Grid.Column="1" SnapsToDevicePixels="True" Background="Transparent" BorderThickness="0"  Command="{Binding SearchButtonCommand}"  >
+                        <Image Source="/Resources/search.ico"   Width="auto"></Image>
+                    </Button>
+                </Grid>
+            </Border>
+            <Border Grid.Row="2"   BorderThickness="1" CornerRadius="15" Width="auto" Background="Transparent" Focusable="False">
+                <Grid>
+                    <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Content="{Binding TweetsFor}" FontFamily="Georgia Pro Black" Foreground="FloralWhite" FontSize="14" VerticalAlignment="Bottom" HorizontalAlignment="Center"></Label>
+                <ItemsControl Grid.Row="1"  Background="Transparent" BorderThickness="0" Focusable="False" ItemsSource="{Binding TweetIDS,UpdateSourceTrigger=PropertyChanged}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>                            
+                            <ListView Background="Transparent" BorderThickness="0" Focusable="False">
+                                    <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Grid.Column="0" Source="/Resources/twitter.ico" Width="30" Focusable="False" Height="auto"></Image>
+                                    <ListViewItem Grid.Column="1" Content="{Binding}" Focusable="False" Foreground="WhiteSmoke" Background="Transparent"></ListViewItem>
+                                </Grid>
+                                
+                            </ListView>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                    
+            </Grid>
+            </Border>
+            <Border Grid.Row="3" BorderThickness="1" CornerRadius="15" Width="auto" Background="Transparent">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="65"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Content="{Binding ImagesFor}" Foreground="FloralWhite" FontSize="20" VerticalAlignment="Center"></Label>
+                    <ItemsControl Grid.Row="1" Margin="10,10,10,10" Background="Transparent" ItemsSource="{Binding Images,UpdateSourceTrigger=PropertyChanged}" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Columns="5" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Image Height="auto" Width="auto" Margin="0,-2,0,-2" Stretch="UniformToFill" Source="{Binding}" HorizontalAlignment="Center" VerticalAlignment="Top">
+                                    <Image.ToolTip>
+                                        <ToolTip DataContext="{Binding PlacementTarget, 
+            RelativeSource={RelativeSource Self}}" ContentStringFormat="Ping: {0}ms" >
+                                            <Border BorderBrush="Black" BorderThickness="1" Margin="5,7,5,5">
+                                                <Image Source="{Binding Source}" Stretch="Uniform" Height="500" Width="auto" />
+                                            </Border>
+                                        </ToolTip>
+                                    </Image.ToolTip>
+                                </Image>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    <local:Spinner  Visibility="{Binding Path=SpinnerVisibility}" Height="auto"/>
+                </Grid>
+            </Border>
+            <Grid Grid.Row="4" Margin="10,10,10,10" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="500"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" HorizontalAlignment="Center"  FontFamily="Bembo" 
+                       Content="Glimpse Search © 2021. All Rights Reserved" Foreground="WhiteSmoke"></Label>
+                <TextBlock Grid.Column="1" HorizontalAlignment="Center" >
+                    <Hyperlink  Command="{Binding RequestFlickrPage}" FontFamily="Bembo" Foreground="WhiteSmoke">Flickr</Hyperlink>
+                </TextBlock>
+                <TextBlock Grid.Column="2"  HorizontalAlignment="Center" >
+                    <Hyperlink  Command="{Binding RequestTwitterPage}" FontFamily="Bembo" Foreground="WhiteSmoke" >Twitter</Hyperlink>
+                </TextBlock>
+            </Grid>
+        </Grid.Children>
+    </Grid>
+</Window>
+ 

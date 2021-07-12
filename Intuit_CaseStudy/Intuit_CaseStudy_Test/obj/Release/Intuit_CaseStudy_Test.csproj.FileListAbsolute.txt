@@ -1,0 +1,7 @@
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\BuildArtifacts\Intuit_CaseStudy_Test.dll
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\BuildArtifacts\Intuit_CaseStudy_Test.pdb
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\Intuit_CaseStudy_Test\obj\Release\Intuit_CaseStudy_Test.csprojAssemblyReference.cache
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\Intuit_CaseStudy_Test\obj\Release\Intuit_CaseStudy_Test.csproj.CoreCompileInputs.cache
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\Intuit_CaseStudy_Test\obj\Release\Intuit_CaseStudy_Test.csproj.CopyComplete
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\Intuit_CaseStudy_Test\obj\Release\Intuit_CaseStudy_Test.dll
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\Intuit_CaseStudy_Test\obj\Release\Intuit_CaseStudy_Test.pdb

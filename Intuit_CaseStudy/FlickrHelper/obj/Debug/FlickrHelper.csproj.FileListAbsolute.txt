@@ -1,0 +1,6 @@
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\FlickrHelper\bin\Debug\Intuit_CaseStudy_FlickrHelper.dll
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\FlickrHelper\bin\Debug\Intuit_CaseStudy_FlickrHelper.pdb
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\FlickrHelper\obj\Debug\FlickrHelper.csproj.CoreCompileInputs.cache
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\FlickrHelper\obj\Debug\Intuit_CaseStudy_FlickrHelper.dll
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\FlickrHelper\obj\Debug\Intuit_CaseStudy_FlickrHelper.pdb
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\FlickrHelper\obj\Debug\FlickrHelper.csprojAssemblyReference.cache

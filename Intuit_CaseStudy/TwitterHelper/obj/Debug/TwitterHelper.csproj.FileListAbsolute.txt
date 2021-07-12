@@ -1,0 +1,9 @@
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\TwitterHelper\obj\Debug\TwitterHelper.csproj.CoreCompileInputs.cache
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\TwitterHelper\bin\Debug\CaseStudy_TwitterServices.dll
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\TwitterHelper\bin\Debug\CaseStudy_TwitterServices.pdb
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\TwitterHelper\bin\Debug\Newtonsoft.Json.dll
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\TwitterHelper\bin\Debug\Newtonsoft.Json.xml
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\TwitterHelper\obj\Debug\TwitterHelper.csproj.CopyComplete
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\TwitterHelper\obj\Debug\CaseStudy_TwitterServices.dll
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\TwitterHelper\obj\Debug\CaseStudy_TwitterServices.pdb
+C:\Users\310304039\Desktop\Learning\Intuit_CaseStudy\TwitterHelper\obj\Debug\TwitterHelper.csprojAssemblyReference.cache
